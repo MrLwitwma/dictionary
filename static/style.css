@@ -133,6 +133,7 @@ main #suggestion_box .suggestion-item{
     min-width: 150px;
     padding: 2px;
     border-radius: 10px;
+    color: white;
 }
 
 
