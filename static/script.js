@@ -108,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let data = await response.json();
             suggestionBox.innerHTML = "";
-            suggestionBox.style.display = "block";
 
             data.matches.forEach((match) => {
                 let suggestionItem = document.createElement("div");

@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #4a90e2, #b0d4f1);
     color: white;
@@ -7,13 +7,6 @@ body {
     padding: 0;
 }
 
-body::-webkit-scrollbar{
-    width: 8px;
-}
-body::-webkit-scrollbar-thumb{
-    background: rgb(0, 0, 0);
-    border-radius: 20px;
-}
 
 header {
     background: #2c3e50;
@@ -60,7 +53,6 @@ nav a:hover {
     font-size: 14px;
     border-radius: 5px;
     background: none;
-    /* display: none; */
 }
 
 main {
@@ -128,10 +120,6 @@ button:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     color: #333;
 }
-.error{
-    text-align: center;
-    color: rgb(157, 44, 44);
-}
 
 footer {
     background: #2c3e50;
@@ -146,10 +134,159 @@ footer p {
 }
 
 
+ */
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body{
+    background: #C5C5C5;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+header{
+    background: #D9D9D9;
+    margin: 0;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 20px;
+}
+header h1{
+    margin: 0;
+    font-size: 20px;
+}
+header nav{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+header a{
+    text-decoration: none;
+    color: #000;
+}
+header a:hover{
+    text-decoration: underline;
+}
+
+
+main{
+    width: 90%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+}
+
+main .searchBox{
+    width: 90%;
+    background: #D9D9D9;
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+main .searchBox input{
+    height: 30px;
+    width: 100%;
+    background: #7D7D7D;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    padding: 0px 10px;
+    color: white;
+}
+input::placeholder {
+    color: white; 
+    opacity: 0.8;
+}
+
+main .searchBox button{
+    max-width: 150px;
+    min-width: 80px;
+    width: 30%;
+    border-radius: 10px;
+}
+main .searchBox button:active, button:hover{
+    background: #003B6E;
+    color: white;
+}
+
+main #details_box{
+    background: #D9D9D9;
+    margin-top: 20px;
+    width: calc(90% - 30px);
+    padding: 20px 30px;
+    border-radius: 30px;
+    min-height: 300px;
+}
+.error{
+    text-align: center;
+    color: rgb(157, 44, 44);
+}
+
+main #suggestion_box{
+    background: #D9D9D9;
+    width: 90%;
+    margin: 5px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 5px; /* Adds spacing between items */
+}
+main #suggestion_box .suggestion-item{
+    cursor: pointer;
+    margin: 1px;
+    background: #7D7D7D;
+    width: 20%;
+    min-width: 150px;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+
+footer{
+    width: 100%;
+    background: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    border-radius: 20px 20px 0px 0px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
 .loader{
     width: 10%;
     height: 20px;
-    background: red;
+    background: rgb(0, 18, 100);
     border-radius: 20px;
     justify-self: center;
     animation: 3s loader infinite;

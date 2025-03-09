@@ -35,19 +35,20 @@
     <header>
         <h1>Vocara Dictionary</h1>
         <nav>
-            <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
+            <a href="#">API</a>
         </nav>
     </header>
     
     <div id="ad_top"></div>
     
     <main>
-        <h3>Dictionary</h3>
-        <input type="text" id="input_field" placeholder="Enter word...">
+        <div class="searchBox">
+            <input type="text" id="input_field" placeholder="Enter word...">
+            <button id="send_button">Search</button>
+        </div>
         <div id="suggestion_box"></div>
-        <button id="send_button"><b>Search</b></button>
         <div id="details_box"></div>
     </main>
     
