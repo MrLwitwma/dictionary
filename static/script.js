@@ -23,11 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchWORD(word) {
         let fetchURL = "https://deepspaceai.pythonanywhere.com/v1/dictionary/get";
+        // let fetchURL = "http://127.0.0.1:5000/v1/dictionary/get"
 
 
         let loader = document.createElement("div");
         loader.setAttribute('class', 'loader')
+        let _ = detailsBox.innerHTML
+        detailsBox.innerHTML = ''
         detailsBox.append(loader)
+        detailsBox.innerHTML += _
 
         try {
             let response = await fetch(fetchURL, {
@@ -98,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function getSuggestion(word) {
         let fetchURL = "https://deepspaceai.pythonanywhere.com/v1/dictionary/match";
+        // let fetchURL = "http://127.0.0.1:5000/v1/dictionary/match"
 
         try {
             let response = await fetch(fetchURL, {
@@ -116,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 suggestionItem.addEventListener("click", () => {
                     inputField.value = match;
-                    suggestionBox.style.display = "none"; 
                     fetchWORD(match);
+                    suggestionBox.innerHTML = ''
                 });
 
                 suggestionBox.appendChild(suggestionItem);
