@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const suggestionBox = document.getElementById('suggestion_box');
     const detailsBox = document.getElementById('details_box');
 
+
     sendButton.addEventListener('click', () => {
         let text = inputField.value.trim();
         if (text) fetchWORD(text);
@@ -21,6 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+    function setupSpeaker(speaker) {
+        speaker.addEventListener("click", () => {
+            const wordElement = document.getElementById("word");
+            if (wordElement) {
+                const text = wordElement.textContent.trim();
+                if (text) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    speechSynthesis.speak(utterance);
+                }
+            }
+        });
+    }
+
     async function fetchWORD(word) {
         let fetchURL = "https://deepspaceai.pythonanywhere.com/v1/dictionary/get";
         // let fetchURL = "http://127.0.0.1:5000/v1/dictionary/get"
@@ -32,6 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
         detailsBox.innerHTML = ''
         detailsBox.append(loader)
         detailsBox.innerHTML += _
+
+        let speaker = document.createElement("img");
+        speaker.setAttribute('src', 'static/speaker.svg')
+        speaker.setAttribute('class', 'speak')
+        setupSpeaker(speaker)
 
         try {
             let response = await fetch(fetchURL, {
@@ -54,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 htmlContent +=  `<p class='error'>Found data for <u>${data.word}</u> instead of <u>${word}</u></p>`
             }
 
-            htmlContent += `<p><b>Word:</b> ${data.word} </p>`;
+            htmlContent += `<p><b>Word:</b> <span id='word'> ${data.word} </span> </p>`;
             
             for (let type in wordData) {
                 if (type === "author") continue;
@@ -94,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             detailsBox.innerHTML = htmlContent;
+            detailsBox.append(speaker)
+
         } catch (error) {
             console.error("Fetch error:", error);
             detailsBox.innerHTML = `<strong>Error:</strong> Unable to fetch results. Please try again later.`;

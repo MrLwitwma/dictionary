@@ -119,6 +119,7 @@ main #details_box{
     padding: 20px 30px;
     border-radius: 30px;
     min-height: 300px;
+    position: relative;
 }
 .error{
     text-align: center;
@@ -185,4 +186,26 @@ footer{
 .click-to-insert{
     cursor: pointer;
     text-decoration: underline;
+}
+
+
+.speak{
+    content: "";
+    display: block;
+    height: 25px;
+    width: 25px;
+    background-image: url('/static/speaker.svg'); /* Replace with actual URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 999;
+    right: 20px;
+    top: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    background: #0000001a;
+    cursor: pointer;
+}
+.speak:hover{
+    background: #0000003d;
 }
