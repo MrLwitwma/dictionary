@@ -122,6 +122,7 @@ main #details_box{
     position: relative;
 }
 .error{
+    height: 20px;
     text-align: center;
     color: rgb(157, 44, 44);
 }
@@ -200,7 +201,7 @@ footer{
     position: absolute;
     z-index: 999;
     right: 20px;
-    top: 30px;
+    top: 60px;
     padding: 5px;
     border-radius: 50%;
     background: #0000001a;

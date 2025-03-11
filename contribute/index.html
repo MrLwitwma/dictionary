@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/static/contribute/script.js"></script>
+    <link rel="stylesheet" href="/static/contribute/style.css">    
+    
+        <!-- Google Adsense
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8723574140909017"
+     crossorigin="anonymous"></script>
+
+        Google tag (gtag.js)
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFGYBWPKZW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-LFGYBWPKZW');
+    </script> -->
+</head>
+<body>
+    
+    <header>
+        <h1 onclick="window.location = '/'">Vocara Dictionary</h1>
+        <nav>
+            <a href="about/">About</a>
+            <a href="#">Contact</a>
+            <a href="https://platform.bitmindai.in">API</a>
+        </nav>
+    </header>
+    
+    
+    <div class="info">
+        Vocara Dictionary is a free online resource designed for seamless translation between English and Bodo. It provides accurate definitions, synonyms, and examples to help users understand and use words effectively. Whether you're a student, researcher, or language enthusiast, Vocara Dictionary makes learning and exploring the Bodo language easier and more accessible. With a user-friendly interface and a growing database of words, it serves as a valuable tool for anyone looking to enhance their vocabulary and communication skills in both languages.
+    </div>
+    
+    <main>
+        <form class="box" id="contributeForm">
+            <h1>Contributor Page</h1>
+        
+            <div class="item">
+                <span class="dark">Word: </span>
+                <input id="word" name="word" placeholder="enter word">
+            </div>
+        
+            <select name="type" id="type" class="item">
+                <option value="noun">Noun</option>
+                <option value="pronoun">Pronoun</option>
+                <option value="verb">Verb</option>
+                <option value="adjective">Adjective</option>
+                <option value="adverb">Adverb</option>
+                <option value="preposition">Preposition</option>
+                <option value="conjunction">Conjunction</option>
+                <option value="interjection">Interjection</option>
+            </select>
+        
+            <div class="item">
+                <span class="dark">Synonyms: </span>
+                <input id="synonyms" name="synonyms" placeholder="enter word">
+            </div>
+        
+            <div class="item">
+                <span class="dark">Antonyms: </span>
+                <input id="antonyms" name="antonyms" placeholder="enter word">
+            </div>
+        
+            <div class="item">
+                <span class="dark">Definition: </span>
+                <input id="definition" name="definition" placeholder="enter word">
+            </div>
+        
+            <div class="item">
+                <span class="dark">Usage: </span>
+                <input id="usage" name="usage" placeholder="enter word">
+            </div>
+        
+            <div class="item">
+                <span class="dark">Author: </span>
+                <input id="author" name="author" placeholder="enter word">
+            </div>
+        
+            <button type="submit">Contribute</button>
+        </form>        
+    </main>
+
+    
+    
+    <footer>
+        <p>&copy; 2025 Vocara Dictionary. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>
