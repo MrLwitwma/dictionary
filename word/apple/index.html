@@ -43,15 +43,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let params = new URLSearchParams(window.location.search);
-            if (params.has('word')) {
-                let word = params.get('word').toLowerCase();
-                if (word === 'apple') {
-                    setTimeout(() => {
-                        window.location.href = "https://dictionary.bitmindai.in?word=apple";
-                    }, 1000);
-                }
-            }
+            window.location.replace("https://dictionary.bitmindai.in?word=apple");
         });
     </script>
 </head>
