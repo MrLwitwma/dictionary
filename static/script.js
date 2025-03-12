@@ -185,4 +185,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 
+    function checkURLForWord() {
+        const params = new URLSearchParams(window.location.search);
+        let word = params.get("word");
+    
+        if (word) {
+            word = word.replace(/^['"]|['"]$/g, "").trim(); // Remove any surrounding quotes
+            inputField.value = word; // Set the input field value
+            fetchWORD(word); // Fetch the word data
+        }
+    }
+    
+    checkURLForWord(); // Call this function on page load
 });
